@@ -14,6 +14,10 @@
     <name>${project.artifactId}</name>
     <description>The ML Model Of DT </description>
 
+    <properties>
+        <lombok_version>1.16.6</lombok_version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -28,6 +32,18 @@
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+
+        <!--注解简化java代码-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok_version}</version>
         </dependency>
     </dependencies>
 

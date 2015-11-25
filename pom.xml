@@ -25,9 +25,10 @@
         <java_target_version>1.7</java_target_version>
         <file_encoding>UTF-8</file_encoding>
         <skip_maven_deploy>false</skip_maven_deploy>
-        <guava.version>19.0-rc2</guava.version>
-        <commons-io.version>2.4</commons-io.version>
-        <joda-time.version>2.9.1</joda-time.version>
+        <guava_version>19.0-rc2</guava_version>
+        <commons-io_version>2.4</commons-io_version>
+        <joda-time_version>2.9.1</joda-time_version>
+        <junit_version>4.12</junit_version>
     </properties>
 
     <dependencyManagement>
@@ -35,25 +36,42 @@
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
+                <version>${guava_version}</version>
             </dependency>
 
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
-                <version>${commons-io.version}</version>
+                <version>${commons-io_version}</version>
             </dependency>
 
             <dependency>
                 <groupId>joda-time</groupId>
                 <artifactId>joda-time</artifactId>
-                <version>${joda-time.version}</version>
+                <version>${joda-time_version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit_version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
     <build>
         <plugins>
+            <!-- 编译插件-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java_source_version}</source>
+                    <target>${java_target_version}</target>
+                    <encoding>${file_encoding}</encoding>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <!-- 打包插件 -->
                 <groupId>org.apache.maven.plugins</groupId>
