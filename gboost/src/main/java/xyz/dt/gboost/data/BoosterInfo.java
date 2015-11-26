@@ -11,8 +11,8 @@ import java.util.List;
  * Created by luolaihu on 11/25/15.
  */
 public class BoosterInfo {
-    public @Setter @Getter long numRow;
-    public @Setter @Getter long numCol;
+    public @Setter @Getter int numRow;
+    public @Setter @Getter int numCol;
     public List<Integer> rootIndex = Lists.newArrayList();
     public List<Integer> foldIndex = Lists.newArrayList();
 
