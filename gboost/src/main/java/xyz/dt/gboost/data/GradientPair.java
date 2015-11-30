@@ -5,8 +5,8 @@ package xyz.dt.gboost.data;
  *
  */
 public class GradientPair {
-    public final float grad;
-    public final float hess;
+    public float grad;
+    public float hess;
     public GradientPair(float grad, float hess){
         this.grad = grad;
         this.hess = hess;
