@@ -10,6 +10,6 @@ import java.util.List;
 public class CommonUnitTest {
     public static void main(String[] args){
         List<String> tmp = Lists.newArrayList();
-        System.out.println(tmp.get(100));
+        System.out.println(10 & (1 << 31) - 1);
     }
 }
